@@ -42,8 +42,13 @@ def test_nncpy37():
     )
     idx_cols1 = ["I1", "J1", "K1"]
     # Test before we fail:
+    print("nnc1:")
+    print(nnc1)
+    print("x in nnc1:")
     print([x for x in nnc1])
+    print("get_ijk f or global index=1")
     print(egrid_grid.get_ijk(global_index=1))
+    print("get_ijk for all x in nnc1")
     print([egrid_grid.get_ijk(global_index=x - 1) for x in nnc1])
 
     nnc1_df = pd.DataFrame(
