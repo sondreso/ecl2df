@@ -41,4 +41,6 @@ install:
   - pip install .
 
 script:
-   python setup.py test
+   python -m pytest test/test*.py -s
+   python setup.py test 
+

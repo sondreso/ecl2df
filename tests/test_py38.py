@@ -41,6 +41,11 @@ def test_nncpy37():
         max(nnc1),
     )
     idx_cols1 = ["I1", "J1", "K1"]
+    # Test before we fail:
+    print([x for x in nnc1])
+    print(egrid_grid.get_ijk(global_index=1))
+    print([egrid_grid.get_ijk(global_index=x - 1) for x in nnc1])
+
     nnc1_df = pd.DataFrame(
         columns=idx_cols1, data=[egrid_grid.get_ijk(global_index=x - 1) for x in nnc1]
     )
