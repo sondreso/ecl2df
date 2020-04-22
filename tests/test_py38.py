@@ -49,7 +49,7 @@ def test_nncpy37():
     print("get_ijk f or global index=1")
     print(egrid_grid.get_ijk(global_index=1))
     print("get_ijk for all x in nnc1")
-    print([egrid_grid.get_ijk(global_index=x - 1) for x in nnc1])
+    print([egrid_grid.get_ijk(global_index=int(x) - 1) for x in nnc1])
 
     nnc1_df = pd.DataFrame(
         columns=idx_cols1, data=[egrid_grid.get_ijk(global_index=x - 1) for x in nnc1]
