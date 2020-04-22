@@ -10,7 +10,7 @@ from __future__ import division
 import logging
 import six
 
-import opm.io
+#import opm.io
 
 from ecl2df import EclFiles
 
