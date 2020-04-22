@@ -11,8 +11,6 @@ import errno
 import logging
 import shlex
 
-import opm.io
-
 from ecl.eclfile import EclFile
 from ecl.grid import EclGrid
 from ecl.summary import EclSum
@@ -21,18 +19,6 @@ logging.basicConfig()
 logger = logging.getLogger(__name__)
 
 # Default parse option to opm.io for a very permissive parsing
-OPMIOPARSER_RECOVERY = [
-    ("PARSE_UNKNOWN_KEYWORD", opm.io.action.ignore),
-    ("SUMMARY_UNKNOWN_GROUP", opm.io.action.ignore),
-    ("PARSE_RANDOM_SLASH", opm.io.action.ignore),
-    ("UNSUPPORTED_*", opm.io.action.ignore),
-    ("PARSE_MISSING_SECTIONS", opm.io.action.ignore),
-    ("PARSE_MISSING_DIMS_KEYWORD", opm.io.action.ignore),
-    ("PARSE_RANDOM_TEXT", opm.io.action.ignore),
-    ("PARSE_MISSING_INCLUDE", opm.io.action.ignore),
-    ("PARSE_EXTRA_RECORDS", opm.io.action.ignore),
-    ("PARSE_EXTRA_DATA", opm.io.action.ignore),
-]
 
 # For Python2 compatibility:
 try:
